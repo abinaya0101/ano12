@@ -1,0 +1,261 @@
+#region Main
+start-pm: |
+  Hey there! my name is **{}**.
+  Any questions on how to use me? use /help
+  Join Our [Group](https://t.me/userbotindo) If You wanna Report Issue 🙂
+  I'm here to make your group management fun and easy!
+  **Managed With ❤️ By :** [UserbotIndo Team](https://t.me/userbotindo)
+  Wanna Add me to your Group? Just click the button below!
+help-pm: |
+  Hello there! My name is **{}**.
+  I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
+  the things I can help you with.
+  **Main** commands available:
+  × /start: Starts me, can be used to check i'm alive or not.
+  × /help: PM's you this message.
+  × /setlang: Change your language preference.
+start-chat: Sending you a warm hi & wishing your day is a happy one!
+help-chat: Contact me in PM to get the list of possible commands.
+add-to-group-button: Add to Group 👥
+start-help-button: Help & Commands ❔
+help-chat-button: Help
+back-button: ⬅️ Back
+markdown-helper: |
+  Markdown is a very powerful formatting tool supported by telegram. {} has some enhancements, to make sure that saved messages are correctly parsed, and to allow you to create buttons.\n
+  <b>Supported Markdown:</b>
+  - <code>__italic__</code>: Double underscores will produce <i>italic</i> text.
+  - <code>**bold**</code>: Double asterisks will produce <b>bold</b> text
+  - <code>`code`</code>: Backticks will produce <code>monospace</code> text.
+  - <code>~~strike~~</code>: Double tildes will produce <del>strikethrough</del> text
+  - <code>--underline--</code> Double Hyphen will produce <u>underline</u> text
+  - <code>[sometext](someURL)</code>: this will create a link - the message will just show sometext, and tapping on it will open the page at someURL.
+  EG: <code>[test](example.com)</code>
+  - <code>[buttontext](buttonurl:someURL)</code>: This is the formatting to create a telegram button. buttontext will be what is displayed on the button, and someurl will be the url to redirect.
+  EG: <code>[This is a button](buttonurl:google.com)</code>
+
+  If you want multiple buttons on the same line, use :same, as such:
+  <code>[one](buttonurl://example.com)</code>
+  <code>[two](buttonurl://google.com:same)</code>
+  This will create two buttons on a single line, instead of one button per line.
+
+  Keep in mind that your message <b>MUST</b> contain some text other than just a button!
+#endregion
+#region admin
+admins-button: Admins
+admins-help: |
+  Lazy to promote or demote someone for admins?
+  Want to see basic information about chat?
+  All stuff about chatroom such as admin lists,
+  pinning or grabbing an invite link can be done easily using the bot.\n
+  × /adminlist: Display all admins in the chat.\n
+  **Admin only:**
+  × /pin: Silently pins the message replied to - add loud, notify or violent to give notificaton to users.
+  × /unpin: Unpin the latest pinned message. Reply to unpin the replied message - add all to unpin all messages.
+  × /setgpic : Changes the group's display picture to the replied images
+  × /zombies : Clean deleted account from your group.
+  × /promote <user_id/username> : Promote member to administrator
+  × /demote <user_id/username> : Demote administrator to members.
+gpic-no-photo: Give me a photo!
+finding-zombie: "`Finding zombies account...`"
+cleaning-zombie: "**{}** `zombies found and has been removed..!` 🚮"
+zombie-clean: "`Zombies not found, group are clean..` "
+promote-error-invalid: "**User id invalid**\n`make sure he is a member here, and you enter the correct id!`"
+demote-success: "`Demoted successfully..`"
+demote-error-perm: "`I don't have permission to demote, I can only demote the ones I promote..`"
+no-demote-user: "`Bruh tell me who you want to demote..` 😒"
+promote-success: "`Successfully Promoted..` ❤️"
+promote-error-perm: "`This user is already an admin!`"
+no-promote-user: "`Who should I promote?\nGive me some user!`"
+#endregion
+#region Backups
+backups-button: Backups
+backups-help: |
+  **Only for chat administrator:**\n
+  × /backup: Backup the group data E.G.: Notes, Greeting, spam shield, etc. that have a data stored on my database.
+  \n× /restore: Reply to the backup file to restore the group data.
+  \nNote: Backup file of a chat can't be restored to another chat.
+backup-doc: |
+  **Successfully backup:**
+  Chat: `{}`
+  Chat ID: `{}`
+  Time: `{}`
+  \nThis file contains backup of:{}
+backup-null: This chat doesn't have any data saved in my database.
+backup-data-null: No data to restore
+backup-progress: Backing up chat data...
+backup-id-invalid: This is a backup from another chat! I can't restore another chat data!
+backup-done: Data restored successfully
+invalid-backup-file: It seems that this file isn't a backup from me. I can't restore from such file!
+no-backup-file: Reply to the backup file!
+restore-progress: Restoring data...
+#endregion
+#region language
+language-button: Language
+language-help: |
+  This bot comes up with multi language support.
+  You can choose your language preference!\n
+  **Available languages:**
+  - 🇺🇸 English.
+  - 🇮🇩 Indonesia.\n
+  Commands:
+  ×  /setlang | /lang | /language : set your prefered language.\n
+  **Note**
+  You can use this command on group chats to change the language setting on that chat.\n
+  Help us to cover more languages to the bot by contributing in [Crowdin!](https://crowdin.com/project/anjani-bot)
+current-language: "**{}** current language is **{}**\nSelect language bellow to change"
+language-code-error: An error has occured (No language code)... please contact support
+language-set-succes: Language set to {} successfully
+language-invalid: Invalid language code.\nAvailable language code {}
+#endregion
+#region misc
+miscs-button: Misc
+miscs-help: |
+  An "odds and ends" plugin for small, simple commands which don't really fit anywhere.\n
+  **Commands:**
+  ×  /id : Get user id, message id, chat id and many more.
+  ×  /ping : Get bot latency.
+  ×  /paste : paste any text file to Nekobin.\n
+  **Special commands:**
+  ×  /covid <country> : Get Covid-19 data in your country.
+covid-text: |
+  **Corona Virus Statistics in {country}**
+  **on {date}**\n
+  **Confirmed Cases :** `{confirmed}`
+  **Active Cases :** `{active}`
+  **Deaths :** `{deaths}`
+  **Recovered :** `{recovered}`\n
+  **New Cases :** `{new_cases}`
+  **New Deaths :** `{new_deaths}`
+  **Critical Cases :** `{critical}`
+  **Total Tests :** `{total_tests}`\n
+  Data provided by [Worldometer]({link})
+wait-paste: "`Pasting to Nekobin...`"
+paste-succes: "**Pasted successfully..!**"
+fail-paste: "`Failed to reach Nekobin`"
+#endregion
+#region mute
+muting-button: Muting
+muting-help: |
+  Some spammers, annoyances, or trolls need to be diciplined.
+  With this plugin you can easily mute someone.\n
+  **Admin Only:**
+  × /mute <userhandle>: Mute member in the supergroup.
+  × /mute <userhandle> X<m|h|d>: Temporary mute a member for X time.
+  × /unmute <usehandle>: Unmutes any muted member.\n
+  Example for temporary mute:
+  m = Minutes, h = Hours and d = Days.
+  ``/mute @username 2h``; This mute a user for 2 hours.
+invalid-time-flag: Invalid time type specified. Expected m,h, or d.
+no-mute-user: Give me a user to mute
+no-unmute-user: Give me a user to unmute
+mute-success: Successfully muted **{}**!
+mute-success-time: Successfully muted **{}** for {}!
+unmute-done: Unmuted!\nthis user can start talking again.
+cant-mute-admin: i'm not gonna stop an admin from talking!
+self-muting: Yeahh... I'm not muting myself!
+already-muted: This user is already muted!
+user-not-muted: This user already has the rights to chat!
+#endregion
+#region note
+notes-button: Notes
+notes-help: |
+  \nSave data for future use with notes!\n
+  **User commands:**
+  × /get <notename>: Get the note with this notename.
+  × #<notename>: Same as /get.
+  × /notes: List all notes in current chats.\n
+  **Admin commands:**
+  × /save <notename> <note text>: Save a new note named "<notename>". Replying to a message will save the replied message.
+  × /clear <notename> | /delnote <notename>: Delete the matched note if exist.
+  \nCheck /markdownhelp for more notes formatting info.
+notes-invalid-args : |
+  Reply to a message with text or provide text after notes name.
+  E.g.: /save <notename> <msg/reply to msg> 
+note-saved: "Notes saved as `{}`."
+note-list: "**Note List in {}:**\n"
+no-notes: "`No notes saved in this chat!`"
+notes-del-noargs: Sent me a note names to delete
+notes-not-exist: No such notes exist in this chat!
+notes-deleted: "Note `{}` deleted."
+#endregion
+#region purge
+purges-button: Purges
+purges-help: |
+  Deletes the chat message easily with this commands.\n
+  **Admin Only:**
+  × /del: Delete message replied to.
+  × /purge | /prune : Deletes all messages until the replied to message.
+purge-done: "`Purged {} messages in {} second(s)...`"
+#endregion
+#region restrictions
+restriction-button: Restrictions
+restriction-help: |
+  People spamming, trolling or interfering need to be restricted.
+  With this plugin group admins can easily restrict violating members.\n
+  **Admin Only:**
+  × /kick <userhandle>: Kicks a user, (via handle, or reply)
+  × /ban <userhandle>: Bans a user. (via handle, or reply)
+  × /unban <userhandle>: Unbans a user. (via handle, or reply)
+  \nhandle can be a user_id's or username
+no-kick-user: who should i kick?
+admin-kick: Yeahh... let's start kicking admins?
+kick-done: "**{}** Kicked!"
+no-ban-user: who should i ban?
+admin-ban: I'm not gonna ban an admin, don't make fun of yourself!
+ban-done: "Banned **{}**!"
+unban-no-user: give me a user to unban
+unban-done: "**{}** Unbanned!"
+#endregion
+#region spam shield
+banned-text: |
+  #SPAM_SHIELD\n
+  **Name:** {}
+  **ID:** `{}`
+  **Reason**: {}
+  **Client:** {}
+  This Person has been detected as spambot and has been removed!
+spamshield-set: "Chat #SPAM_SHIELD turned {}"
+spamshield-view: |
+  Spam shield setting: {}.
+  Spam shield is a usefull plugin to help protect your group from spammers and trollers.
+#endregion
+#region greetings
+greetings-button: Greetings
+greetings-help: |
+  your group's welcome messages that can be personalised in multiple ways.\n
+  **Admin Commands:**
+  × /setwelcome <reply> : Sets a custom welcome message.
+  × /resetwelcome : Resets to bot default welcome message.
+  × /welcome <on/off> : enable/disable Welcome messages.
+  × /welcome : Display current welcome message and settings.
+  × /cleanservice <on/off> : Clean 'user is joined' service messages automatically.
+bot-added: |
+  Hi... Thanks for inviting me.
+  Currently, I'm still in development.
+  Some features haven't been added yet and will be added by time.
+  If you found something that not supposed to happen,
+  We would appreciate a report on our support group.
+  Thank You 😊
+default-welcome: Hey {first}, how are you?\nWelcome to {chatname}
+clean-serv-set: Turned {} service messages cleaning.
+welcome-set: Welcome turned {} on new member join.
+cust-welcome-set: Successfully set custom welcome message!
+reset-welcome: Successfully reset welcome message to default!
+view-welcome: |
+  **This chat has the welcome setting:**
+  `Welcoming user` = `{}`
+  `Clean service message` = `{}`
+  And the welcome message of this chat is:
+#endregion
+#region common-error
+error-its-myself: "I can't do anything for myself 😒"
+error-chat-private: "**Error:** `Chat type private`\nThis command for groups only..."
+error-no-rights: "You don't have rights to use this command!"
+err-not-participant: "This user is not a member of this chat!"
+err-invalid-option: Invalid option!
+err-invalid-username-id : "`Invalid username or userid!`"
+error-reply-to-message: Reply to a message!
+err-yes-no-args: Usage is on/yes or off/no
+err-peer-invalid: PEER_ID_INVALID\ncan't execute command, I haven't met this person before.
+err-api-down: Neko api down for now, try again later..
+#endregion

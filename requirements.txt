@@ -1,0 +1,13 @@
+aiohttp
+aiorun
+colorlog
+covid
+dnspython
+motor
+pyrogram
+python-dotenv
+PyYAML
+spamwatch
+tgcrypto
+uvloop
+
